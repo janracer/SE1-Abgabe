@@ -14,7 +14,7 @@ public class GermanTranslator implements Translator {
 	}
 
 	/**
-	 * Objektmethode der Klasse GermanTranslator zur Ausgabe einer Info.
+	 * Objektmethode der Klasse GermanTranslator zur Ausgabe einer Info.xylfgylfnasklfjölskadfjölkasfdöaklsfd
 	 */
 	public void printInfo(){
 		System.out.println( "GermanTranslator v1.9, erzeugt am " + this.date );
