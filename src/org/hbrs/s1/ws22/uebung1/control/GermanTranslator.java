@@ -1,5 +1,8 @@
 package org.hbrs.s1.ws22.uebung1.control;
 
+import java.sql.Array;
+import java.sql.SQLOutput;
+
 public class GermanTranslator implements Translator {
 
 	public String date = "Okt/2022"; // Default-Wert
@@ -8,13 +11,17 @@ public class GermanTranslator implements Translator {
 	 * Methode zur Übersetzung einer Zahl in eine String-Repraesentation
 	 */
 	public String translateNumber( int number ) {
-		// [ihr Source Code aus Übung 1-2]
-
-		return null;
+		try {
+			String[] arr = {"eins", "zwei", "drei", "vier", "fünf", "sechs", "sieben", "acht", "neun", "zehn"};
+			return arr[number-1];
+		}
+		catch (Exception e){
+			return "Zahl außerhalb des Bereiches";
+			}
 	}
 
 	/**
-	 * Objektmethode der Klasse GermanTranslator zur Ausgabe einer Info.xylfgylfnasklfjölskadfjölkasfdöaklsfd
+	 * Objektmethode der Klasse GermanTranslator zur Ausgabe einer Info.
 	 */
 	public void printInfo(){
 		System.out.println( "GermanTranslator v1.9, erzeugt am " + this.date );

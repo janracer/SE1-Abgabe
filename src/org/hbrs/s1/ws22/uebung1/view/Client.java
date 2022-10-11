@@ -1,6 +1,9 @@
 package org.hbrs.s1.ws22.uebung1.view;
+import org.hbrs.s1.ws22.uebung1.control.GermanTranslator;
+import org.hbrs.s1.ws22.uebung1.control.Translator;
+import org.hbrs.s1.ws22.uebung1.control.TranslatorFactory;
 
-public class Client {
+public class Client implements Translator {
 
 		/*
 		 * Methode zur Ausgabe einer Zahl auf der Console (auch bezeichnet als CLI, Terminal)
@@ -11,11 +14,18 @@ public class Client {
 			// aufgerufen werden.
 			//
 			// Strenge Implementierung gegen das Interface Translator gewuenscht!
+			GermanTranslator translator = TranslatorFactory.createGermanTranslator();
+			String result = translator.translateNumber(1);
 
 			System.out.println("Das Ergebnis der Berechnung: " +
 					"[das Ergebnis an dieser Stelle]"  );
 
 		}
+
+	@Override
+	public String translateNumber(int number) {
+		return null;
+	}
 }
 
 
